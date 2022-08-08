@@ -1,13 +1,11 @@
 # inflearn_spring_introduction
 인프런 김영한 강사님의 [스프링 입문 강의](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8)를 들으면서 기록한 리포지토리 입니다.
-
-개발환경
-
-자바 11
-
-H2 Database 1.4.200 버전
-
-강의 목표: 예제를 만들어가면서 스프링 개발의 전반적인 감을 잡고 큰 그림을 머리속에 그리는 것
+***
++ 개발환경
+    - Windows 10
+    - 자바 11
+    - H2 Database 1.4.200 버전
+    - IntelliJ Community
 ***
 ## 🍀 스프링 웹 개발 기초
 스프링 웹 개발에는 크게 3가지 방법이 있다.
@@ -26,6 +24,10 @@ H2 Database 1.4.200 버전
 ## 🍀 백엔드 개발
 + 일반적인 웹 어플리케이션 계층 구조
     - ![웹 어플리케이션 구조](https://github.com/Hobak-Gogumi/inflearn_spring_introduction/blob/main/img/structure.PNG)
+    - 컨트롤러: 웹 MVC의 컨트롤러 역할
+    - 서비스: 핵심 비즈니스 로직 구현
+    - 리포지토리: 데이터베이스에 접근, 도메인 객체를 DB에 저장하고 관리
+    - 도메인: 비즈니스 도메인 객체(ex. 회원, 주문, 쿠폰...)
 + 테스트 케이스 작성
     - `src/test/java` 하위 폴더에 생성
 
@@ -50,7 +52,7 @@ H2 Database 1.4.200 버전
     - 기본적인 SQL도 JPA가 직접 만들어서 실행
     - `@Entity` 애노테이션을 붙이면 JPA가 관리하는 엔티티
     - `@Transactional` 해당 클레스의 메서드를 실행할 때 트랜잭션을 시작하고, 메서드가 정상 종료되면 트랜잭션을 커밋
-    - **JPA를 통한 모든 데이터 변경은 트랜잭션 안에서 실행**
+    - JPA를 통한 모든 데이터 변경은 트랜잭션 안에서 실행
 + 스프링 데이터 JPA
     - JpaRepository를 상속받는 인터페이스를 작성
     - 스프링 빈에 알아서 등록해줌
